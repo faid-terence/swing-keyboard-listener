@@ -12,15 +12,12 @@ public class SwingKeyboardListener extends JFrame {
         JPanel contentPane = new JPanel();
         contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
 
-        // Create a label to display the key pressed
         JLabel keyPressedLabel = new JLabel("Interact with Keyboard by Pressing any key");
         contentPane.add(keyPressedLabel);
 
-        // Add a key listener to the content pane
         contentPane.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                // Ignore this event
             }
 
             @Override
@@ -31,11 +28,8 @@ public class SwingKeyboardListener extends JFrame {
 
             @Override
             public void keyReleased(KeyEvent e) {
-                // Ignore this event
             }
         });
-
-        // Make the content pane focusable so it can receive keyboard events
         contentPane.setFocusable(true);
         contentPane.requestFocus();
 
